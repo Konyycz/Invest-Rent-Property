@@ -1,0 +1,717 @@
+/*****************************************************************************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
+ **************************************** COMMON STYLES **********************************************
+ *****************************************************************************************************
+ *****************************************************************************************************/
+:root {
+    --main-blue: rgb(31,82,141);
+    --dark-main-blue: rgb(27,48,77);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Maven pro',Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+}
+
+.absolute {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+.card {
+    width: calc( 100% - 30px);
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 15px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1140px;
+    }
+}
+
+/*****************************************************************************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
+ **************************************** HEADER STYLES **********************************************
+ *****************************************************************************************************
+ *****************************************************************************************************/
+header {
+    width: 100%;
+}
+
+.header-bg-photo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: 100%;
+    position: relative;
+    background-image: url("../img/uvodni-fotka.jpg");
+    display: flex;
+    align-items: center;
+}
+
+.header-bg-photo > div > h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 35px;
+    padding-left: 20px;
+    font-weight: 900;
+}
+
+.section-houses {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    height: 400px;
+    background: linear-gradient(to right, var(--main-blue), var(--main-blue), var(--main-blue), whitesmoke, whitesmoke, whitesmoke);
+}
+
+.section-houses > h3 {
+    color: white;
+    padding: 70px 40px 70px 0;
+    writing-mode: vertical-rl;
+    transform: rotateZ(180deg);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.line-white {
+    display: block;
+    height: 4px;
+    width: 35px;
+    background: white;
+    transform: rotateZ(90deg);
+    margin-bottom: 20px;
+}
+
+.infoCard {
+    width: 100%;
+    padding: 30px 15px;
+    border-radius: 10px 10px 0 0;
+    box-sizing: border-box;
+    position: absolute;
+    top: -60px;
+    height: 470px;
+    background: linear-gradient(white, whitesmoke);
+}
+
+.infoCard > h2 {
+    margin-bottom: 15px;
+}
+
+.infoCard > p {
+    line-height: 25px;
+    font-size: 14px;
+    color: rgba(0,0,0,0.8);
+}
+
+
+/* NAVBAR STYLE */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.navbar-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.navbar-inner > img {
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    color: rgba(0,0,0,1);
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    text-align: right;
+}
+
+.menu-open {
+    height: 131px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0,0,0,0.175);
+}
+
+.menu > a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.menu > a:hover, .navbar-inner > i:hover {
+    color: black;
+}
+
+@media (min-width: 576px) {
+    .header-bg-photo > div > h1 {
+        font-size: 45px;
+    }
+    .navbar {
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .infoCard {
+        width: 75%;
+        padding: 30px;
+        transform: translateX(-50%);
+        left: 50%;
+        max-width: 740px;
+    }
+
+    .header-bg-photo {
+        height: 650px;
+    }
+
+    .header-bg-photo > div > h1 {
+        font-size: 65px;
+    }
+    .navbar {
+        flex-direction: row;
+    }
+    .navbar-inner {
+        width: 194px;
+    }
+    .navbar-inner > img:last-child {
+        display: none;
+    }
+    .menu {
+        height: auto;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .menu > a {
+        font-size: 14px;
+        margin-top: 0;
+        margin-right: 25px;
+    }
+}
+
+@media (min-width: 992px) {
+    .infoCard {
+        width: 50%;
+        padding: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .infoCard {
+        padding: 40px 80px;
+    }
+}
+
+/*****************************************************************************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
+ ************************************ HOUSE SECTION STYLES *******************************************
+ *****************************************************************************************************
+ *****************************************************************************************************/
+
+.house-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: -30px 0 120px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.inner-house-slider {
+    width: 100%;
+    position: relative;
+}
+
+.card-house {
+    width: calc(100% - 30px)!important;
+    margin: 0 15px!important;
+}
+
+.img-house-div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: block;
+    position: relative;
+    background-image: url("../img/dum01.jpg");
+    border-radius: 10px 10px 0 0;
+}
+
+.img-house-div2 {
+    background-image: url("../img/dum02.jpg");
+}
+
+.card-house-text {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.card-house-text > span {
+    align-items: center;
+}
+
+.card-house-text > span:first-child {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card-house-text > span:last-child > small {
+    font-size: 8px;
+}
+
+.move-next-slider {
+    position: absolute;
+    right: 0;
+    top: 15%;
+    width: 60px;
+    height: 60px;
+    background-color: var(--main-blue);
+    color: white;
+    border-radius: 10px 0 0 10px;
+    z-index: 1000;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transform: translateY(50%);
+}
+
+.move-next-slider:hover {
+    background-color: var(--dark-main-blue);
+}
+
+.move-next-slider > img {
+    width: 33px;
+    height: 33px;
+}
+
+
+
+@media (min-width: 360px) {
+    .house-slider {
+        margin: -110px 0 120px 0;
+    }
+}
+
+@media (min-width: 540px) {
+    .house-slider {
+        margin: -180px 0 120px 0;
+    }
+    .img-house-div {
+        height: 250px;
+    }
+}
+
+@media (min-width: 576px) {
+    .card-house-text {
+        flex-direction: row;
+    }
+    .card-house-text > span:first-child {
+        margin-bottom: 0px;
+    }
+    .move-next-slider {
+    top: 25%;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .inner-house-slider {
+        margin-right: -75px;
+    }
+    .move-next-slider {
+        right: 75px;
+    }
+    .img-house-div {
+        height: 300px;
+    }
+}
+
+@media (min-width: 900px) {
+    .house-slider {
+        margin: -220px 0 120px 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .house-slider {
+        margin: -180px 0 120px 0;
+    }
+    .inner-house-slider {
+        margin-right: -150px;
+    }
+    .move-next-slider {
+        right: 150px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .house-slider {
+        margin: -195px 0 170px 0;
+    }
+    .img-house-div {
+        height: 400px;
+    }
+    .move-next-slider {
+        top: 33%;
+    }
+}
+
+
+/*****************************************************************************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
+ ************************************ KATALOG BUTTON STYLES ******************************************
+ *****************************************************************************************************
+ *****************************************************************************************************/
+
+.katalog-button {
+    position: absolute;
+    top: -65px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+    justify-content: center;
+    background-color: var(--dark-main-blue);
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.katalog-button > h2 {
+    padding: 0 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.big-white-button {
+    margin-top: 20px;
+    padding: 18px 20px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 14px;
+    background-color: white;
+    color: var(--main-blue);
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 0 22px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 0 22px -2px rgba(0,0,0,0.75);
+    box-shadow: 0 0 22px -2px rgba(0,0,0,0.75);
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.big-white-button:hover {
+    background-color: #d5e4f6;
+}
+
+.big-white-button:hover > img {
+    color: ghostwhite;
+}
+
+.big-white-button > img {
+    margin-left: 10px;
+}
+
+@media (min-width: 768px){
+    .big-white-button {
+        padding: 20px 32px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .katalog-button {
+        width: 70%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: right;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .katalog-button > h2 {
+        width: fit-content;
+        padding: 0;
+        margin-right: 20px;
+    }
+
+    .big-white-button {
+        margin-top: 0;
+        padding: 22px 40px;
+        font-size: 17px;
+        margin-right: -130px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .katalog-button {
+        width: 60%;
+    }
+
+    .big-white-button {
+        padding: 25px 60px;
+        font-size: 16px;
+    }
+}
+
+
+/*****************************************************************************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
+ ************************************** SECTION CARD STYLES ******************************************
+ *****************************************************************************************************
+ *****************************************************************************************************/
+.section-cards {
+    position: relative;
+    padding: 140px 0 40px 0;
+    background: linear-gradient(var(--main-blue), var(--dark-main-blue))
+}
+
+.section-cards > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.section-cards-column {
+    width: 100%;
+}
+
+.card-text {
+    padding: 30px;
+    box-sizing: border-box;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.card-icon {
+    height: 60px;
+    width: 60px;
+}
+
+.card-text-nadpis {
+    margin: 5px 0 20px 0;
+    font-size: 28px;
+}
+
+.card-text-first, .card-text-second {
+    font-size: 16px;
+    color: rgba(0,0,0,0.8);
+}
+
+.card-text-first {
+    font-weight: bold;
+    margin: 5px 0 15px 0;
+    color: black;
+}
+
+@media (min-width: 768px) {
+    .card-text {
+        padding: 30px 50px;
+    }
+    .section-cards-column {
+        width: 50%;
+    }
+
+    .section-cards-column:nth-child(2) {
+        margin-top: 50px;
+    }
+}
+
+
+/*****************************************************************************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
+ **************************************** INFO STYLES **********************************************
+ *****************************************************************************************************
+ *****************************************************************************************************/
+
+.info {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 120px;
+    align-items: center;
+}
+
+.info-quater {
+    width: 100%;
+    color: white;
+    line-height: 17px;
+    margin-bottom: 35px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-quater > h4 {
+    margin-bottom: 16px;
+    font-size: 20px
+}
+
+.menu-quater {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-quater-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.menu-quater-inner > a {
+    width: 50%;
+    font-size: 14px;
+    color: rgba(255,255,255,0.9);
+}
+
+.info-quater > a, .info-quater-inner > a {
+    font-size: 14px;
+    color: rgba(255,255,255,1);
+    text-decoration: none;
+}
+
+.info-quater > img {
+    height: 120px;
+    width: 150px;
+}
+
+.info-socialky {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px
+}
+
+.info-socialky > img {
+    margin-right: 18px;
+    height: 25px;
+    width: 30px;
+}
+
+.info-socialky > i:last-child {
+    margin-right: 0;
+}
+
+.menu-quater > a:hover, .info-socialky > i:hover {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media (min-width: 576px) {
+    .info-quater {
+        width: 50%;
+    }
+}
+@media (min-width: 992px) {
+    .info-quater {
+        width: 25%;
+        align-items: flex-start;
+        justify-content: left;
+    }
+
+    .menu-quater-inner {
+        text-align: left;
+    }
+}
+
+/*****************************************************************************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
+ **************************************** FOOTER STYLES **********************************************
+ *****************************************************************************************************
+ *****************************************************************************************************/
+
+footer {
+    width: 100%;
+    background-color: #262626;
+    color: rgba(255,255,255,0.8);
+    padding: 10px 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* resposive widths */
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
