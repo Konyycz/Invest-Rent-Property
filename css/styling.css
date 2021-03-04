@@ -62,11 +62,19 @@ body {
 /*****************************************************************************************************
  *****************************************************************************************************
  *****************************************************************************************************
+ *************************************** HOMEPAGE STYLES *********************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
  **************************************** HEADER STYLES **********************************************
  *****************************************************************************************************
  *****************************************************************************************************/
 header {
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .header-bg-photo {
@@ -698,8 +706,138 @@ footer {
 
 
 
+/*****************************************************************************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
+ ************************************ SLUZBY CUSTOM STYLES *******************************************
+ *****************************************************************************************************
+ *****************************************************************************************************/
 
+.bg-photo-blue {
+    height: 600px;
+    background-image: linear-gradient(rgba(37, 78, 128, 0.9), rgba(37, 78, 128, 0.9)), url("../img/uvodni-fotka.jpg");
+}
 
+.bg-photo-blue > div > h1 {
+    width: fit-content;
+    margin: 0 auto 10px auto;
+}
+
+.bg-photo-blue > div > p {
+    width: fit-content;
+    margin: auto;
+    color: white;
+    max-width: 650px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 25px;
+    padding: 0 10px;
+}
+
+.sluzby-section {
+    padding-bottom: 200px;
+    background-color: transparent;
+    margin-top: -10px;
+    position: relative;
+    z-index: 10;
+    height: fit-content;
+}
+
+.sluzby-section > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sluzby-section-card {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.sluzby-section-card:first-child {
+    margin-top: -50px;
+}
+
+.sluzby-section-card:last-child {
+    margin-bottom: -50px;
+}
+
+.sluzby-section-card-number {
+    background-color: var(--main-blue);
+    color: white;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+    box-sizing: border-box;
+}
+
+.sluzby-section-card-text {
+    padding: 30px 40px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+}
+
+.sluzby-section-card-text > h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.sluzby-section-card-text > p {
+    font-size: 14px;
+    color: rgba(0,0,0,0.75);
+    line-height: 25px;
+}
+
+.dark-blue-box {
+    background-color: transparent;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .bg-photo-blue {
+        height: 550px;
+    }
+    .bg-photo-blue > div > p {
+        padding: 0;
+    }
+    .sluzby-section {
+        padding-bottom: 250px;
+        margin-top: -40px;
+    }
+    .sluzby-section-card {
+        flex-direction: row;
+    }
+    .sluzby-section-card-number {
+        font-size: 45px;
+        padding: 30px;
+        border-radius: 10px 0 0 10px;
+        max-width: 160px;
+        min-width: 160px;
+        width: 160px;
+    }
+    .sluzby-section-card-text {
+        border-radius: 0 10px 10px 0;
+    }
+    .dark-blue-box {
+        background-color: var(--dark-main-blue);
+    }
+}
 
 
 
