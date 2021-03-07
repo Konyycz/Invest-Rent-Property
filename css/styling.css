@@ -38,12 +38,28 @@ body {
     margin: 0 auto;
 }
 
+h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.containerHeader {
+    width: calc(100% - 10px);
+    margin-left: 5px;
+}
+
 @media (min-width: 576px) {
     .container {
         max-width: 540px;
     }
 }
 @media (min-width: 768px) {
+    .containerHeader {
+        width: calc(100% - 10%);
+        margin-left: 5%;
+    }
     .container {
         max-width: 720px;
     }
@@ -89,14 +105,6 @@ header {
     align-items: center;
 }
 
-.header-bg-photo > div > h1 {
-    color: white;
-    text-transform: uppercase;
-    font-size: 35px;
-    padding-left: 20px;
-    font-weight: 900;
-}
-
 .section-houses {
     width: 100%;
     box-sizing: border-box;
@@ -107,7 +115,8 @@ header {
 
 .section-houses > h3 {
     color: white;
-    padding: 70px 40px 70px 0;
+    padding: 70px 0;
+    margin-left: 5%;
     writing-mode: vertical-rl;
     transform: rotateZ(180deg);
     display: flex;
@@ -155,6 +164,7 @@ header {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
+    border-radius: 0 0 10px 10px;
 }
 
 .navbar-inner {
@@ -195,6 +205,7 @@ header {
     margin-top: 8px;
     cursor: pointer;
     font-weight: 600;
+    color: black;
 }
 
 .menu > a:hover, .navbar-inner > i:hover {
@@ -202,11 +213,8 @@ header {
 }
 
 @media (min-width: 576px) {
-    .header-bg-photo > div > h1 {
+    .header-bg-photo h1 {
         font-size: 45px;
-    }
-    .navbar {
-        border-radius: 0 0 10px 10px;
     }
 }
 
@@ -223,7 +231,7 @@ header {
         height: 650px;
     }
 
-    .header-bg-photo > div > h1 {
+    .header-bg-photo h1 {
         font-size: 65px;
     }
     .navbar {
@@ -274,6 +282,7 @@ header {
     margin: -30px 0 120px 0;
     display: flex;
     justify-content: flex-end;
+    z-index: 1;
 }
 
 .inner-house-slider {
@@ -282,8 +291,8 @@ header {
 }
 
 .card-house {
-    width: calc(100% - 30px)!important;
-    margin: 0 15px!important;
+    width: calc(100% - 30px);
+    margin: 0 15px;
 }
 
 .img-house-div {
@@ -636,6 +645,7 @@ header {
     width: 50%;
     font-size: 14px;
     color: rgba(255,255,255,0.9);
+    text-decoration: none;
 }
 
 .info-quater > a, .info-quater-inner > a {
@@ -721,6 +731,411 @@ footer {
 .bg-photo-blue > div > h1 {
     width: fit-content;
     margin: 0 auto 10px auto;
+}
+
+.bg-photo-blue > div > p {
+    width: fit-content;
+    margin: auto;
+    color: white;
+    max-width: 650px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 25px;
+    padding: 0 10px;
+}
+
+.sluzby-section {
+    padding-bottom: 200px;
+    background-color: transparent;
+    margin-top: -10px;
+    position: relative;
+    z-index: 10;
+    height: fit-content;
+}
+
+.sluzby-section > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sluzby-section-card {
+    width: calc(100% - 10px);
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0 5px 20px 5px;
+    border-radius: 10px;
+}
+
+.sluzby-section-card:first-child {
+    margin-top: -50px;
+}
+
+.sluzby-section-card:last-child {
+    margin-bottom: -50px;
+}
+
+.sluzby-section-card-number {
+    background-color: var(--main-blue);
+    color: white;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+    box-sizing: border-box;
+}
+
+.sluzby-section-card-text {
+    padding: 30px 40px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+}
+
+.sluzby-section-card-text > h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.sluzby-section-card-text > p {
+    font-size: 14px;
+    color: rgba(0,0,0,0.75);
+    line-height: 25px;
+}
+
+.dark-blue-box {
+    background-color: transparent;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .bg-photo-blue {
+        height: 550px;
+    }
+    .bg-photo-blue > div > p {
+        padding: 0;
+    }
+    .sluzby-section {
+        padding-bottom: 250px;
+        margin-top: -40px;
+    }
+    .sluzby-section-card {
+        flex-direction: row;
+    }
+    .sluzby-section-card-number {
+        font-size: 45px;
+        padding: 30px;
+        border-radius: 10px 0 0 10px;
+        max-width: 160px;
+        min-width: 160px;
+        width: 160px;
+    }
+    .sluzby-section-card-text {
+        border-radius: 0 10px 10px 0;
+    }
+    .dark-blue-box {
+        background-color: var(--dark-main-blue);
+    }
+}
+
+
+
+/*****************************************************************************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
+ ************************************ IDK CUSTOM STYLES *******************************************
+ *****************************************************************************************************
+ *****************************************************************************************************/
+
+.house-info-white {
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(white, white, whitesmoke);
+    width: calc(100% - 10px);
+    margin: -50px auto 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px 10px 0 0;
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+.house-info-white > div > h2 {
+    margin-bottom: 20px;
+}
+
+.house-info-white > div:nth-child(1) {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.house-info-white > div:nth-child(1) > p:nth-child(2) {
+    margin-bottom: 10px;
+}
+
+.house-info-white > div > p {
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.house-info-blue {
+    background-color: var(--main-blue);
+    color: white;
+    min-width: 280px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    margin: 30px auto 30px auto;
+    border-radius: 10px;
+}
+
+.house-info-blue > p {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+.house-info-blue > p:nth-child(5) {
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.house-info-blue > h5 {
+    font-size: 17px;
+}
+.house-info-blue > h5 > small {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.rodinny-dum-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.more-info-blue {
+    width: 100%;
+    background-color: var(--dark-main-blue);
+    border-radius: 10px;
+    padding: 20px;
+    margin: -190px 0 100px 0;
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.more-info-blue > h2, .more-info-blue > h4 {
+    margin-bottom: 10px;
+}
+
+.more-info-blue > p {
+    font-size: 14px;
+}
+
+.more-info-blue > p:nth-child(3) {
+    margin-bottom: 30px;
+}
+
+.more-info-blue > div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.mini-blue-card {
+    width: 100%;
+    margin: 10px 0;
+    background-color: var(--main-blue);
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.mini-blue-card > span {
+    background-color: #284671;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px 0 0 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.Form {
+    margin-top: 20px;
+}
+
+.Form label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.Form input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.Form > div {
+    margin-bottom: 20px;
+}
+
+.Form-100, .Form50 {
+    display: flex;
+    flex-direction: column;
+}
+
+.Form-100 {
+    width: 100%;
+}
+
+.Form-50 {
+    width: 100%;
+}
+
+.big-transparent-button {
+    padding: 20px 40px;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: white;
+    font-weight: 700;
+    border: 2px solid white;
+    border-radius: 50px;
+    display: block;
+    margin: 30px auto 0 auto;
+}
+
+.big-transparent-button:hover {
+    background-color: white;
+    color: var(--main-blue);
+    cursor: pointer;
+}
+
+.more-info-blue > small {
+    display: block;
+    font-size: 14px;
+    text-decoration: underline;
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.more-houses {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.more-houses-nadpis {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* nutny !IMPORTANT at prepise nastaveni z karet z homepage */
+.more-houses > div {
+    width: calc(100% - 10px) !important;
+    margin: 0 auto 20px auto!important;
+}
+
+.more-houses > div > div {
+    height: 300px !important;
+}
+
+@media (min-width: 768px) {
+    .house-info-white {
+        padding: 40px;
+    }
+    .rodinny-dum-cards > div {
+        width: calc(50% - 30px) !important;
+        margin: 0 15px!important;
+    }
+    .more-info-blue {
+        padding: 40px;
+    }
+    .more-info-blue > div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .mini-blue-card {
+        width: calc(50% - 10px);
+        margin-left: 10px;
+    }
+    .mini-blue-card:nth-child(odd) {
+        margin-right: 10px;
+        margin-left: 0;
+    }
+    .Form-50 {
+        width: calc(50% - 20px);
+    }
+    .more-houses > div {
+        width: calc(50% - 20px) !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .house-info-white {
+        flex-direction: row;
+    }
+    .house-info-white > div:nth-child(1) {
+        padding: 0 30px 0 0;
+    }
+    .house-info-blue {
+        margin: -60px -100px 30px auto;
+    }
+}
+
+/*****************************************************************************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
+ ************************************ SLUZBY CUSTOM STYLES *******************************************
+ *****************************************************************************************************
+ *****************************************************************************************************/
+
+ .bg-photo-blue {
+    height: 600px;
+    background-image: linear-gradient(rgba(37, 78, 128, 0.9), rgba(37, 78, 128, 0.9)), url("../img/uvodni-fotka.jpg");
+}
+
+.bg-photo-blue > div > h1 {
+    width: fit-content;
+    margin: 0 auto 10px auto;
+    padding: 0!important;
 }
 
 .bg-photo-blue > div > p {
@@ -840,9 +1255,321 @@ footer {
 }
 
 
+/*****************************************************************************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
+ ************************************ KATALOG DOMŮ CUSTOM STYLES *************************************
+ *****************************************************************************************************
+ *****************************************************************************************************/
+
+.kd-domy {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
+    margin-top: -100px;
+    margin-bottom: 100px;
+}
+
+.card-house-kd {
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+
+ @media (min-width: 992px) {
+    .kd-domy {
+        margin-bottom: 150px;
+    }
+    .card-house-kd {
+        width: calc(50% - 30px);
+        margin: 0 30px 30px 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .kd-domy {
+        margin-bottom: 200px;
+    }
+}
+
+/*****************************************************************************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
+ ************************************ PRÁVĚ STAVÍME CUSTOM STYLES ************************************
+ *****************************************************************************************************
+ *****************************************************************************************************/
+
+ .bg-photo-ps {
+    height: 500px;
+    background-image: none;
+}
+
+.bg-photo-ps > div > h1 {
+    color: var(--main-blue)
+}
+
+.bg-photo-ps > div > p {
+    color: black;
+}
+
+.photo-ps {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    margin-top: -100px;
+}
+
+.photo-ps > div {
+    width: calc(100% - 10px);
+    height: 200px;
+    background-image: url(../img/dum01.jpg);
+    border-radius: 10px 10px 0 0;
+    margin: 0 5px 10px 5px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 576px) {
+    .photo-ps > div {
+        width: calc(50% - 20px);
+        margin: 0 10px 20px 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .photo-ps > div {
+        width: calc(33% - 30px);
+        margin: 0 15px 20px 15px;
+    }
+}
 
 
+/*****************************************************************************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
+ ************************************ O NAS CUSTOM STYLES ********************************************
+ *****************************************************************************************************
+ *****************************************************************************************************/
 
+ .about-us-section {
+    background: linear-gradient(var(--main-blue), var(--dark-main-blue));
+ }
+
+.about-us-cards {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ .card {
+    width: calc(100% - 30px);
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 15px;
+}
+
+.about-us-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.about-us-flex > img {
+    width: calc(100% - 10px);
+    height: 200px;
+    margin: 0 10px 10px 0;
+    align-items: center;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.about-us-heading {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+
+.about-us-text {
+    position: relative;
+    height: 300px;
+    padding: 150px 0;
+    font-size: 19px;
+}
+
+.about-us-text > h1 {
+    color: #1f528e;
+    text-transform: uppercase;
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.about-us-text-strong {
+    font-weight: 900;
+}
+
+@media (min-width: 576px) {
+    .about-us-flex > img {
+        width: calc(50% - 10px);
+    }
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+    .about-us-flex > img {
+        width: calc(25% - 10px);
+    }
+}
+@media (min-width: 1200px) {
+}
+
+/*****************************************************************************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
+ ************************************ KONTAKT CUSTOM STYLES ******************************************
+ *****************************************************************************************************
+ *****************************************************************************************************/
+
+.blue-button {
+    margin-top: 20px;
+    padding: 28px 10px;
+    border-radius: 15px;
+    font-size: 16px;
+    background-color: #1f528e;
+    color: white;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.1);
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 400px;
+}
+
+.contact-padding {
+    padding-top: 100px;
+}
+
+.contact-padding > h1 {
+    color: var(--main-blue);
+    font-size: 75px;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+
+.whole-section {
+    background: linear-gradient(var(--main-blue), var(--dark-main-blue));
+}
+
+.contact-form {
+    position: relative;
+    z-index: 15;
+}
+
+.contact-button {
+    padding: 20px 50px;
+}
+
+.contacts > h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ .contact-photo {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+ }
+
+ .contact-photo > img {
+    width: calc(100% - 10px);
+    height: auto;
+    margin-right: 10px;
+}
+
+.office {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.office-heading {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.office-photo > img {
+   width: 100%;
+   height: auto;
+   margin: auto;
+   align-items: center;
+   margin-right: 10px;
+   border-radius: 10px;
+}
+
+.mapouter {
+    width: 960px;
+}
+
+.contact-buttons > h1 {
+    padding-top: 100px;
+    color: var(--main-blue);
+    display: flex;
+    font-size: 75px;
+}
+
+.contact-text {
+    padding-bottom: 500px;
+    margin-left: 50px;
+    margin-top: 50px;
+    line-height: 14px;
+}
+
+.form-heading {
+    text-transform: none;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.contact-photo-detail {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .contact-photo > img {
+        width: calc(50% - 20px);
+        margin-right: 10px;
+    }
+    .office-photo > img {
+        width: calc(50% - 20px);
+        margin: 0 10px 10px 0;
+     }
+}
+
+@media (min-width: 992px) {
+    .contact-photo > img {
+        width: calc(33% - 10px);
+        margin-right: 10px;
+    }
+    .office-photo > img {
+        width: calc(25% - 20px);
+        margin: 0 10px 10px 0;
+     }
+}
 
 /* resposive widths */
 @media (min-width: 576px) {
