@@ -201,7 +201,7 @@ header {
 .menu > a {
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 16px;
     margin-top: 8px;
     cursor: pointer;
     font-weight: 600;
@@ -291,8 +291,8 @@ header {
 }
 
 .card-house {
-    width: calc(100% - 30px);
-    margin: 0 15px;
+    width: calc(100% - 30px)!important;
+    margin: 0 15px!important;
 }
 
 .img-house-div {
@@ -381,7 +381,7 @@ header {
         margin-bottom: 0px;
     }
     .move-next-slider {
-    top: 25%;
+        top: 25%;
     }
 }
 
@@ -590,7 +590,7 @@ header {
     }
 
     .section-cards-column:nth-child(2) {
-        margin-top: 50px;
+        margin-top: 80px;
     }
 }
 
@@ -609,7 +609,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 120px;
+    margin-top: 20px;
     align-items: center;
 }
 
@@ -849,12 +849,10 @@ footer {
     }
 }
 
-
-
 /*****************************************************************************************************
  *****************************************************************************************************
  *****************************************************************************************************
- ************************************ IDK CUSTOM STYLES *******************************************
+ ************************************ IDK CUSTOM STYLES **********************************************
  *****************************************************************************************************
  *****************************************************************************************************/
 
@@ -997,7 +995,7 @@ footer {
     font-size: 14px;
 }
 
-.Form input {
+.Form input, .Form textarea {
     width: 100%;
     padding: 15px;
     border: none;
@@ -1123,145 +1121,9 @@ footer {
 /*****************************************************************************************************
  *****************************************************************************************************
  *****************************************************************************************************
- ************************************ SLUZBY CUSTOM STYLES *******************************************
+ *********************************** KATALOG DOMU STYLES *********************************************
  *****************************************************************************************************
  *****************************************************************************************************/
-
- .bg-photo-blue {
-    height: 600px;
-    background-image: linear-gradient(rgba(37, 78, 128, 0.9), rgba(37, 78, 128, 0.9)), url("../img/uvodni-fotka.jpg");
-}
-
-.bg-photo-blue > div > h1 {
-    width: fit-content;
-    margin: 0 auto 10px auto;
-    padding: 0!important;
-}
-
-.bg-photo-blue > div > p {
-    width: fit-content;
-    margin: auto;
-    color: white;
-    max-width: 650px;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 25px;
-    padding: 0 10px;
-}
-
-.sluzby-section {
-    padding-bottom: 200px;
-    background-color: transparent;
-    margin-top: -10px;
-    position: relative;
-    z-index: 10;
-    height: fit-content;
-}
-
-.sluzby-section > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sluzby-section-card {
-    width: 100%;
-    max-width: 650px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-.sluzby-section-card:first-child {
-    margin-top: -50px;
-}
-
-.sluzby-section-card:last-child {
-    margin-bottom: -50px;
-}
-
-.sluzby-section-card-number {
-    background-color: var(--main-blue);
-    color: white;
-    width: 100%;
-    font-size: 20px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px 10px 0 0;
-    box-sizing: border-box;
-}
-
-.sluzby-section-card-text {
-    padding: 30px 40px;
-    background-color: white;
-    border-radius: 0 0 10px 10px;
-    box-sizing: border-box;
-}
-
-.sluzby-section-card-text > h3 {
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.sluzby-section-card-text > p {
-    font-size: 14px;
-    color: rgba(0,0,0,0.75);
-    line-height: 25px;
-}
-
-.dark-blue-box {
-    background-color: transparent;
-    width: 100%;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-}
-
-@media (min-width: 768px) {
-    .bg-photo-blue {
-        height: 550px;
-    }
-    .bg-photo-blue > div > p {
-        padding: 0;
-    }
-    .sluzby-section {
-        padding-bottom: 250px;
-        margin-top: -40px;
-    }
-    .sluzby-section-card {
-        flex-direction: row;
-    }
-    .sluzby-section-card-number {
-        font-size: 45px;
-        padding: 30px;
-        border-radius: 10px 0 0 10px;
-        max-width: 160px;
-        min-width: 160px;
-        width: 160px;
-    }
-    .sluzby-section-card-text {
-        border-radius: 0 10px 10px 0;
-    }
-    .dark-blue-box {
-        background-color: var(--dark-main-blue);
-    }
-}
-
-
-/*****************************************************************************************************
- *****************************************************************************************************
- *****************************************************************************************************
- ************************************ KATALOG DOMŮ CUSTOM STYLES *************************************
- *****************************************************************************************************
- *****************************************************************************************************/
-
 .kd-domy {
     display: flex;
     flex-direction: row;
@@ -1272,18 +1134,23 @@ footer {
     margin-bottom: 100px;
 }
 
-.card-house-kd {
-    width: 100%;
-    margin: 0 0 15px 0;
+.kd-domy > div {
+    margin-bottom: 15px!important;
 }
 
- @media (min-width: 992px) {
+@media (min-width: 992px) {
     .kd-domy {
         margin-bottom: 150px;
     }
-    .card-house-kd {
-        width: calc(50% - 30px);
+    .kd-domy > div {
+        width: calc(50% - 30px) !important;
         margin: 0 30px 30px 0;
+    }
+    .kd-domy > div > div {
+        height: 300px;
+    }
+    .katalog-heading {
+        font-size: 82px!important;
     }
 }
 
@@ -1296,11 +1163,10 @@ footer {
 /*****************************************************************************************************
  *****************************************************************************************************
  *****************************************************************************************************
- ************************************ PRÁVĚ STAVÍME CUSTOM STYLES ************************************
+ *********************************** PRAVE STAVIME STYLES ********************************************
  *****************************************************************************************************
  *****************************************************************************************************/
-
- .bg-photo-ps {
+.bg-photo-ps {
     height: 500px;
     background-image: none;
 }
@@ -1317,7 +1183,7 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     margin-top: -100px;
 }
 
@@ -1346,90 +1212,6 @@ footer {
     }
 }
 
-
-/*****************************************************************************************************
- *****************************************************************************************************
- *****************************************************************************************************
- ************************************ O NAS CUSTOM STYLES ********************************************
- *****************************************************************************************************
- *****************************************************************************************************/
-
- .about-us-section {
-    background: linear-gradient(var(--main-blue), var(--dark-main-blue));
- }
-
-.about-us-cards {
-    width: 40%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
- .card {
-    width: calc(100% - 30px);
-    background-color: white;
-    border-radius: 10px;
-    margin: 0 15px;
-}
-
-.about-us-flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.about-us-flex > img {
-    width: calc(100% - 10px);
-    height: 200px;
-    margin: 0 10px 10px 0;
-    align-items: center;
-    border-radius: 10px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.about-us-heading {
-    text-align: center;
-    margin: auto;
-    padding-bottom: 20px;
-    padding-top: 50px;
-}
-
-.about-us-text {
-    position: relative;
-    height: 300px;
-    padding: 150px 0;
-    font-size: 19px;
-}
-
-.about-us-text > h1 {
-    color: #1f528e;
-    text-transform: uppercase;
-    font-size: 70px;
-    margin-bottom: 10px;
-}
-
-.about-us-text-strong {
-    font-weight: 900;
-}
-
-@media (min-width: 576px) {
-    .about-us-flex > img {
-        width: calc(50% - 10px);
-    }
-}
-@media (min-width: 768px) {
-}
-@media (min-width: 992px) {
-    .about-us-flex > img {
-        width: calc(25% - 10px);
-    }
-}
-@media (min-width: 1200px) {
-}
-
 /*****************************************************************************************************
  *****************************************************************************************************
  *****************************************************************************************************
@@ -1437,138 +1219,266 @@ footer {
  *****************************************************************************************************
  *****************************************************************************************************/
 
-.blue-button {
-    margin-top: 20px;
-    padding: 28px 10px;
-    border-radius: 15px;
-    font-size: 16px;
-    background-color: #1f528e;
-    color: white;
-    cursor: pointer;
-    border: 1px solid rgba(0,0,0,0.1);
-    font-weight: 600;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 400px;
-}
-
-.contact-padding {
-    padding-top: 100px;
-}
-
-.contact-padding > h1 {
-    color: var(--main-blue);
-    font-size: 75px;
-}
-
-.contact-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 100%;
-}
-
-.whole-section {
-    background: linear-gradient(var(--main-blue), var(--dark-main-blue));
-}
-
-.contact-form {
-    position: relative;
-    z-index: 15;
-}
-
-.contact-button {
-    padding: 20px 50px;
-}
-
-.contacts > h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
- .contact-photo {
-     display: flex;
-     flex-direction: row;
-     flex-wrap: wrap;
+.bg-photo-contact {
+    height: 900px;
+    background-image: none;
  }
 
- .contact-photo > img {
-    width: calc(100% - 10px);
-    height: auto;
-    margin-right: 10px;
+.kontakt-main-heading {
+    color: var(--main-blue); 
+    font-size: 50px;
+    width: fit-content;
+    margin: 0 auto 20px auto!important;
 }
 
-.office {
+.button-styling {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    padding-top: 100px;
+    justify-content: center;
 }
 
-.office-heading {
-    text-align: center;
-    padding-top: 150px;
+.blue-button {
+    background-color: var(--main-blue);
+    color: white;
+    padding: 30px 60px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
-.office-photo > img {
-   width: 100%;
-   height: auto;
-   margin: auto;
-   align-items: center;
-   margin-right: 10px;
-   border-radius: 10px;
-}
-
-.mapouter {
-    width: 960px;
-}
-
-.contact-buttons > h1 {
-    padding-top: 100px;
-    color: var(--main-blue);
-    display: flex;
-    font-size: 75px;
-}
-
-.contact-text {
-    padding-bottom: 500px;
-    margin-left: 50px;
-    margin-top: 50px;
-    line-height: 14px;
-}
-
-.form-heading {
-    text-transform: none;
-    font-size: 30px;
+.button-styling > p {
+    color: black;
+    margin: 40px 0 0 40px;
     font-weight: 500;
 }
 
-.contact-photo-detail {
+.contact-form-heading {
+    font-size: 35px;
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+
+ .contact-main-card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 80px;
+}
+
+.contact-card {
+    border-radius: 10px;
+    padding-bottom: 20px;
+    margin: 0 10px 10px 10px!important;
+    width: calc(100% - 20px);
+}
+
+.contact-card > p {
+    padding-left: 10px;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-card > small {
+    padding-left: 10px;
+    display: block;
     width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.contact-card > span {
+    padding-left: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 12px;
+
+}
+
+.contact-photo {
+   background-image: url(../img/dum01.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 200px;
+   width: 100%;
+   border-radius: 10px 10px 0 0;
+   margin-bottom: 10px;
+}
+
+ .office-main-photo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ }
+
+ .office-photo {
+    width: calc(100% - 20px);
+    background-image: url(../img/dum01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    height: 250px;
+    border-radius: 10px;
+ }
+
+ .office-photo:nth-last-child() {
+    margin-right: 0px;
+ }
+
+ .h2-heading {
+    color: white;
+    margin: 10px auto;
+    font-size: 34px;
+    text-transform: uppercase;
+    width: fit-content;
+ }
+
+ .office-map {
+     margin: 10px 10px 50px 10px;
+     border-radius: 10px;
+     overflow: hidden;
+ }
+
+ @media (min-width: 576px) {
+    .blue-button {
+        padding: 30px 100px;
+    }
+    .office-photo {
+        width: calc(50% - 20px);
+     }
 }
 
 @media (min-width: 768px) {
-    .contact-photo > img {
-        width: calc(50% - 20px);
-        margin-right: 10px;
+    .kontakt-main-heading {
+        font-size: 100px!important;
     }
-    .office-photo > img {
+    .contact-card {
         width: calc(50% - 20px);
-        margin: 0 10px 10px 0;
-     }
+    }
 }
 
 @media (min-width: 992px) {
-    .contact-photo > img {
-        width: calc(33% - 10px);
-        margin-right: 10px;
+    .kontakt-main-heading {
+        margin: 0 auto 40px 0!important;
     }
-    .office-photo > img {
+    .button-styling {
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .contact-card {
+        width: calc(33.33% - 20px);
+    }
+    .office-photo {
         width: calc(25% - 20px);
-        margin: 0 10px 10px 0;
-     }
+    }
+}
+
+/*****************************************************************************************************
+ *****************************************************************************************************
+ *****************************************************************************************************
+ ************************************ O NÁS CUSTOM STYLES ********************************************
+ *****************************************************************************************************
+ *****************************************************************************************************/
+
+.bg-photo-aboutUs {
+    height: 1300px;
+    background-image: none;
+}
+
+.about-us-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.about-us-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.reviews {     
+    display: flex;     
+    flex-direction: row;     
+    flex-wrap: nowrap;     
+    align-items: center;
+    margin-top: -270px;
+}  
+    
+.review-name {     
+    padding: 80px;     
+    font-size: 28px;     
+    font-weight: 600;     
+    background-color: var(--main-blue);     
+    border-radius: 10px;     
+    box-sizing: border-box;     
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}  
+    
+.review-name > span {     
+        font-weight: 500;     
+        font-size: 17px;
+}  
+        
+.review-text {     
+    padding: 20px 60px;     
+    background-color: white;     
+    border-radius: 0 10px 10px 0;     
+    font-size: 16px;     
+    color: rgba(0,0,0,0.75);     
+    line-height: 25px;
+}  
+    
+.arrow-left {     
+    padding: 20px;    
+    background-color: var(--dark-main-blue);     
+    border-radius: 10px 0 0 10px;
+}  
+    
+.arrow-left2 {     
+    border-radius: 0 10px 10px 0; 
+}  
+
+.arrow-left > img {     
+    width: 35px;     
+    height: 35px;     
+    transform: rotateZ(180deg);
+}  
+
+.arrow-left2 > img {     
+    width: 35px;     
+    height: 35px;     
+    transform: rotateZ(0deg);
+}
+
+@media (min-width: 400px) {
+    .bg-photo-aboutUs {
+        height: 1000px;
+        background-image: none;
+    }
+}
+@media (min-width: 576px) {
+    .bg-photo-aboutUs {
+        height: 800px;
+        background-image: none;
+    }
+}
+@media (min-width: 992px) {
+    .about-us-column {
+        width: 50%;
+    }
+    .about-us-column:nth-child(2) {
+        margin-top: 110px;
+    }
 }
 
 /* resposive widths */

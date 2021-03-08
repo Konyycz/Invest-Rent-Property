@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="./slick/slick-theme.css">
         <link rel="stylesheet" href="./css/styling.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     </head>
 <body>
 
@@ -22,141 +22,146 @@
                 <img src="./img/menu.png" alt="menu" height="30px" onclick="menuHandler()" />
             </div>
             <div id="menu" class="menu">
-                <a>domy</a>
-                <a>právě stavíme</a>
+                <a href="katalog-domu.html">domy</a>
+                <a href="prave-stavime.html">právě stavíme</a>
                 <a href="sluzby.html">služby</a>
-                <a>o nás</a>
-                <a>kontakt</a>
+                <a href="o-nas.html">o nás</a>
+                <a href="kontakt.html">kontakt</a>
             </div>
         </div>
     </div>
     <!-- NAVBAR END -->
-</header>
-
-<!-- HEADER START -->
-<section class="container contact-padding">
-    <h1>KONTAKT</h1>
-    <div class="contact-buttons">
-        <div>
-            <a class="blue-button">
-                office@investrentproperty.cz
-                <img height="15px" width="15px" src="./img/sipka-vpravo--modra.svg" alt="sipka-vpravo-modra"/>
-            </a>
-            <a class="blue-button">
-                +420 723 851 579
-                <img height="15px" width="15px" src="./img/sipka-vpravo--modra.svg" alt="sipka-vpravo-modra"/>
-            </a>
-            <a class="blue-button">
-                Královská cesta 147, Kolín
-                <img height="15px" width="15px" src="./img/sipka-vpravo--modra.svg" alt="sipka-vpravo-modra"/>
-            </a>
-        </div>
-        <div class="contact-text">
-            <p>Invest Rent Property s. r. o. <br><br>
-            Antala Staška 1859/34 <br>
-            140 00 Praha 4 <br><br>
-            IČ:07502907 <br>
-            DIČ: CZ07502907<br><br>
-            Spisová značka: C 302088 vedená u Městského<br>
-            soudu v Praze</p>
-
+    <div class="header-bg-photo bg-photo-blue bg-photo-contact">
+        <div class="container">
+            <h1 class="kontakt-main-heading">Kontakt</h1>
+            <div class="button-styling">
+                <div class="blue-main-button">
+                    <div class="blue-button">office@investrentproperty.cz</div>
+                    <div class="blue-button">+420 723 851 579</div>
+                    <div class="blue-button">Královská cesta 147, Kolín</div>
+                </div>
+                <p>Invest Rent Property s. r. o. <br><br>
+                Antala Staška 1859/34 <br>
+                140 00 Praha 4 <br><br>
+                IČ:07502907 <br>
+                DIČ: CZ07502907<br><br>
+                Spisová značka: C 302088 vedená u Městského<br>
+                soudu v Praze</p>
+            </div>
         </div>
     </div>
-</section>
-<!-- HEADER END -->
+</header>
 
-<!-- FORM START -->
-<section class="whole-section">
+
+<!-- SECTION START -->
+<div class="section-cards">
+
+    <!-- FORM START -->
     <div class="container">
-        <div class="more-info-blue contact-form">
-            <h1 class="form-heading">Pošlete nám zprávu</h1>
+        <div class="more-info-blue">
+            <h2 class="contact-form-heading">Pošlete nám zprávu</h2>
             <div class="Form">
                 <div class="Form-50">
                     <label for="name">Jméno:</label>
                     <input id="name" type="text"/>
                 </div>
-            <div class="Form-50">
-                <label for="contact">Kontakt:</label>
-                <input id="contact" type="text"/>
+                <div class="Form-50">
+                    <label for="contact">Kontakt:</label>
+                    <input id="contact" type="text"/>
+                </div>
+                <div class="Form-100">
+                    <label for="message">Zpráva:</label>
+                    <textarea id="message" rows="10"></textarea>
+                </div>
             </div>
-            <div class="Form-100">
-                <label for="message">Zpráva:</label>
-                <input id="message" type="textarea"/>
-            </div>
-    <button class="big-transparent-button contact-button">Odeslat zprávu</button>
-            </div>
+
+            <button class="big-transparent-button" style="padding: 20px 80px!important;">Odeslat zprávu</button>
         </div>
     </div>
-<!-- FORM END -->
+    <!-- FORM END -->
 
-<!-- PHOTO-SECTION START -->
+    <!-- KONTAKTY START -->
+        <div class="container" style="display: block;">
+            <h2 class="h2-heading">Kontakty</h2>
+            <div class="contact-main-card">
+                <div class="card contact-card">
+                    <div class="contact-photo"></div>
+                    <P>Petr Kvíz</P>
+                    <small>Generální ředitěl</small>
+                    <span>+420 723 851 579</span>
+                    <span>office@investrentproperty.cz</span>
+                </div>
+                <div class="card contact-card">
+                    <div class="contact-photo"></div>
+                    <P>Petr Kvíz</P>
+                    <small>Generální ředitěl</small>
+                    <span>+420 723 851 579</span>
+                    <span>office@investrentproperty.cz</span>
+                </div>
+                <div class="card contact-card">
+                    <div class="contact-photo"></div>
+                    <P>Petr Kvíz</P>
+                    <small>Generální ředitěl</small>
+                    <span>+420 723 851 579</span>
+                    <span>office@investrentproperty.cz</span>
+                </div>
+            </div>
+        </div>
+    <!-- KONTAKTY END -->
+
+    <!-- NAŠE KANCELÁŘ START -->
+    <div class="container" style="display: block;">
+        <h2 class="h2-heading">Naše kancelář</h2>
+        <div class="office-main-photo">
+            <div class="office-photo"></div>
+            <div class="office-photo"></div>
+            <div class="office-photo"></div>
+            <div class="office-photo"></div>
+        </div>
+        <div class="office-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.56280606823!2d15.209347115884437!3d50.01954912619979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c1530a3accd67%3A0xb5d3689482841cc9!2zS3LDoWxvdnNrw6EgY2VzdGEgMTQ3LCBLb2zDrW4gSVYsIDI4MCAwMiBLb2zDrW4!5e0!3m2!1scs!2scz!4v1615152872184!5m2!1scs!2scz" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <!-- NAŠE KANCELÁŘ END --->
+
+    <!-- INFO SECTION -->
     <div class="container">
-        <div class="contacts">
-            <h1>Kontakty</h1>
-            <div class="contact-photo">
-                <img class="contact-photo-detail" src="./img/dum01.jpg" alt="">
-                <img class="contact-photo-detail" src="./img/dum01.jpg" alt="">
-                <img class="contact-photo-detail" src="./img/dum01.jpg" alt="">
+        <div class="info">
+            <div class="info-quater">
+                <img src="img/whiteLogo.png" alt="white_logo"/>
+            </div>
+            <div class="info-quater menu-quater">
+                <h4>Menu</h4>
+                <div class="menu-quater-inner">
+                    <a href="katalog-domu.html">Domy</a>
+                    <a href="o-nas.html">O nás</a>
+                    <a href="prave-stavime.html">Právě stavíme</a>
+                    <a href="kontakt.html">Kontakt</a>
+                    <a href="sluzby.html">Služby</a>
+                </div>
+            </div>
+            <div class="info-quater">
+                <h4>Kontakty</h4>
+                <a href="https://goo.gl/maps/jerCvnybjrdyfVwR9">office@investrentproperty.cz</a>
+                <a href="https://goo.gl/maps/jerCvnybjrdyfVwR9">+420 723 851 579</a>
+                <a href="https://goo.gl/maps/jerCvnybjrdyfVwR9">Královská cesta 147, Kolín</a>
+            </div>
+            <div class="info-quater">
+                <h4>Sociální sítě</h4>
+                <div class="info-socialky">
+                    <img src="./img/fb.svg" alt="fb-icon"/>
+                    <img src="./img/ig.svg" alt="ig-icon"/>
+                    <img src="./img/yt.svg" alt="yt-icon"/>
+                </div>
             </div>
         </div>
     </div>
+    <!-- INFO SECTION END -->
 
 
-    <div class="container">
-        <h1 class="office-heading">Naše kancelář</h1>
-        <div class="office">
-            <div class="office-photo">
-                <img src="./img/dum01.jpg" alt="">
-                <img src="./img/dum01.jpg" alt="">
-                <img src="./img/dum01.jpg" alt="">
-                <img src="./img/dum01.jpg" alt="">
-            </div>
-        </div>
-
-        <div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.56280606823!2d15.209347115884437!3d50.01954912619979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470c1530a3accd67%3A0xb5d3689482841cc9!2zS3LDoWxvdnNrw6EgY2VzdGEgMTQ3LCBLb2zDrW4gSVYsIDI4MCAwMiBLb2zDrW4!5e0!3m2!1scs!2scz!4v1615054575453!5m2!1scs!2scz" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </div>
-<!-- PHOTO-SECTION END -->
-
-        <!-- INFO SECTION -->
-        <div class="container">
-            <div class="info">
-                <div class="info-quater">
-                    <img src="img/whiteLogo.png" alt="white_logo"/>
-                </div>
-                <div class="info-quater menu-quater">
-                    <h4>Menu</h4>
-                    <div class="menu-quater-inner">
-                        <a>Domy</a>
-                        <a>O nás</a>
-                        <a>Právě stavíme</a>
-                        <a>Kontakt</a>
-                        <a>Služby</a>
-                    </div>
-                </div>
-                <div class="info-quater">
-                    <h4>Kontakty</h4>
-                    <a href="https://goo.gl/maps/jerCvnybjrdyfVwR9">office@investrentproperty.cz</a>
-                    <a href="https://goo.gl/maps/jerCvnybjrdyfVwR9">+420 723 851 579</a>
-                    <a href="https://goo.gl/maps/jerCvnybjrdyfVwR9">Královská cesta 147, Kolín</a>
-                </div>
-                <div class="info-quater">
-                    <h4>Sociální sítě</h4>
-                    <div class="info-socialky">
-                        <img src="./img/fb.svg" alt="fb-icon"/>
-                        <img src="./img/ig.svg" alt="ig-icon"/>
-                        <img src="./img/yt.svg" alt="yt-icon"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- INFO SECTION END -->
-    
-    
-    </div>
-</section>
-    <!-- SECTION END -->
+</div>
+<!-- SECTION END -->
     
     
     <!-- FOOTER START -->
