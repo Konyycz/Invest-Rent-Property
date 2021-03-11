@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 20 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1.43862,0,0,1.40937,-1358.33,-1619.17)">
+        <g transform="matrix(1,0,0,1.02076,-160.625,242.234)">
+            <ellipse cx="1111.67" cy="895.238" rx="6.861" ry="7.044" style="fill:rgb(28,48,78);"/>
+        </g>
+        <g transform="matrix(1,0,0,1.02076,624.416,804.06)">
+            <text x="323.69px" y="348.966px" style="font-family:'MavenPro-Regular', 'Maven Pro';font-size:12px;fill:white;">?</text>
+        </g>
+    </g>
+</svg>

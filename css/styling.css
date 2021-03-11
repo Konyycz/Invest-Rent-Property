@@ -105,6 +105,10 @@ header {
     align-items: center;
 }
 
+.header-bg-photo h1 {
+    font-size: 50px;
+}
+
 .section-houses {
     width: 100%;
     box-sizing: border-box;
@@ -214,7 +218,7 @@ header {
 
 @media (min-width: 576px) {
     .header-bg-photo h1 {
-        font-size: 45px;
+        font-size: 60px;
     }
 }
 
@@ -232,7 +236,7 @@ header {
     }
 
     .header-bg-photo h1 {
-        font-size: 65px;
+        font-size: 85px;
     }
     .navbar {
         flex-direction: row;
@@ -260,11 +264,22 @@ header {
         width: 50%;
         padding: 40px;
     }
+    .header-bg-photo h1 {
+        font-size: 90px;
+    }
 }
 
 @media (min-width: 1200px) {
     .infoCard {
         padding: 40px 80px;
+    }
+    .menu > a {
+        font-size: 16px;
+        margin-top: 0;
+        margin-right: 30px;
+    }
+    .header-bg-photo h1 {
+        font-size: 100px;
     }
 }
 
@@ -323,7 +338,7 @@ header {
 }
 
 .card-house-text > span:first-child {
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
@@ -477,11 +492,12 @@ header {
 }
 
 .big-white-button:hover {
-    background-color: #d5e4f6;
+    background-color: #f5f5f5;
 }
 
 .big-white-button:hover > img {
-    color: ghostwhite;
+    color: #f5f5f5;
+    margin-right: 0;
 }
 
 .big-white-button > img {
@@ -517,6 +533,12 @@ header {
         font-size: 17px;
         margin-right: -130px;
     }
+    .big-white-button:hover > img {
+        color: #f5f5f5;
+        margin-right: -15px;
+        transition: all 0.5s ease-in-out;
+        margin-left: 25px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -528,7 +550,12 @@ header {
         padding: 25px 60px;
         font-size: 16px;
     }
+    .big-white-button:hover > img {
+        margin-right: -30px;
+        margin-left: 40px;
+    }
 }
+
 
 
 /*****************************************************************************************************
@@ -669,6 +696,7 @@ header {
     margin-right: 18px;
     height: 25px;
     width: 30px;
+    cursor: pointer;
 }
 
 .info-socialky > i:last-child {
@@ -1041,13 +1069,17 @@ footer {
     cursor: pointer;
 }
 
-.more-info-blue > small {
+.more-info-blue > a > small {
     display: block;
     font-size: 14px;
     text-decoration: underline;
     width: 100%;
     margin: 20px 0;
     text-align: center;
+}
+
+.more-info-blue > a {
+    color: white;
 }
 
 .more-houses {
@@ -1150,7 +1182,7 @@ footer {
         height: 300px;
     }
     .katalog-heading {
-        font-size: 82px!important;
+        font-size: 83px!important;
     }
 }
 
@@ -1191,7 +1223,7 @@ footer {
     width: calc(100% - 10px);
     height: 200px;
     background-image: url(../img/dum01.jpg);
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     margin: 0 5px 10px 5px;
     background-position: center;
     background-size: cover;
