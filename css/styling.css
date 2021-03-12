@@ -20,6 +20,25 @@ body {
     background-color: whitesmoke;
 }
 
+h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 900;
+    width: fit-content;
+}
+
+p {
+    line-height: 25px;
+    font-size: 14px;
+    color: rgba(0,0,0,0.8);
+}
+
+.headlineBlue {
+    margin: 0 auto 10px auto;
+    color: var(--main-blue);
+}
+
 .absolute {
     position: absolute;
     width: 100%;
@@ -38,13 +57,6 @@ body {
     margin: 0 auto;
 }
 
-h1 {
-    color: white;
-    text-transform: uppercase;
-    font-size: 40px;
-    font-weight: 900;
-}
-
 .containerHeader {
     width: calc(100% - 10px);
     margin-left: 5px;
@@ -54,8 +66,14 @@ h1 {
     .container {
         max-width: 540px;
     }
+    h1 {
+        font-size: 55px;
+    }
 }
 @media (min-width: 768px) {
+    h1 {
+        font-size: 65px;
+    }
     .containerHeader {
         width: calc(100% - 10%);
         margin-left: 5%;
@@ -65,11 +83,17 @@ h1 {
     }
 }
 @media (min-width: 992px) {
+    h1 {
+        font-size: 75px;
+    }
     .container {
         max-width: 960px;
     }
 }
 @media (min-width: 1200px) {
+    h1 {
+        font-size: 90px;
+    }
     .container{
         max-width: 1140px;
     }
@@ -105,8 +129,22 @@ header {
     align-items: center;
 }
 
-.header-bg-photo h1 {
-    font-size: 50px;
+.bg-photo-blue {
+    height: 600px;
+    background-image: linear-gradient(rgba(37, 78, 128, 0.9), rgba(37, 78, 128, 0.9)), url("../img/uvodni-fotka.jpg");
+}
+
+.bg-photo-blue > div > p {
+    width: fit-content;
+    margin: auto;
+    color: white;
+    max-width: 650px;
+    padding: 0 10px;
+    text-align: left;
+}
+
+.bg-center {
+    text-align: center;
 }
 
 .section-houses {
@@ -150,12 +188,6 @@ header {
 
 .infoCard > h2 {
     margin-bottom: 15px;
-}
-
-.infoCard > p {
-    line-height: 25px;
-    font-size: 14px;
-    color: rgba(0,0,0,0.8);
 }
 
 
@@ -216,11 +248,6 @@ header {
     color: black;
 }
 
-@media (min-width: 576px) {
-    .header-bg-photo h1 {
-        font-size: 60px;
-    }
-}
 
 @media (min-width: 768px) {
     .infoCard {
@@ -235,9 +262,6 @@ header {
         height: 650px;
     }
 
-    .header-bg-photo h1 {
-        font-size: 85px;
-    }
     .navbar {
         flex-direction: row;
     }
@@ -264,9 +288,6 @@ header {
         width: 50%;
         padding: 40px;
     }
-    .header-bg-photo h1 {
-        font-size: 90px;
-    }
 }
 
 @media (min-width: 1200px) {
@@ -277,9 +298,6 @@ header {
         font-size: 16px;
         margin-top: 0;
         margin-right: 30px;
-    }
-    .header-bg-photo h1 {
-        font-size: 100px;
     }
 }
 
@@ -308,6 +326,33 @@ header {
 .card-house {
     width: calc(100% - 30px)!important;
     margin: 0 15px!important;
+    position: relative;
+}
+
+.card-house-hoverinho {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+.card-house-hoverinho > p {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+}
+
+.card-house:hover > .card-house-hoverinho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .img-house-div {
@@ -370,8 +415,6 @@ header {
     width: 33px;
     height: 33px;
 }
-
-
 
 @media (min-width: 360px) {
     .house-slider {
@@ -736,13 +779,14 @@ header {
 footer {
     width: 100%;
     background-color: #262626;
-    color: rgba(255,255,255,0.8);
     padding: 10px 0;
     font-size: 12px;
     text-align: center;
 }
 
-
+footer > p {
+    color: rgba(255,255,255,0.8)!important;
+}
 
 /*****************************************************************************************************
  *****************************************************************************************************
@@ -750,28 +794,6 @@ footer {
  ************************************ SLUZBY CUSTOM STYLES *******************************************
  *****************************************************************************************************
  *****************************************************************************************************/
-
-.bg-photo-blue {
-    height: 600px;
-    background-image: linear-gradient(rgba(37, 78, 128, 0.9), rgba(37, 78, 128, 0.9)), url("../img/uvodni-fotka.jpg");
-}
-
-.bg-photo-blue > div > h1 {
-    width: fit-content;
-    margin: 0 auto 10px auto;
-}
-
-.bg-photo-blue > div > p {
-    width: fit-content;
-    margin: auto;
-    color: white;
-    max-width: 650px;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 25px;
-    padding: 0 10px;
-}
-
 .sluzby-section {
     padding-bottom: 200px;
     background-color: transparent;
@@ -848,12 +870,6 @@ footer {
 }
 
 @media (min-width: 768px) {
-    .bg-photo-blue {
-        height: 550px;
-    }
-    .bg-photo-blue > div > p {
-        padding: 0;
-    }
     .sluzby-section {
         padding-bottom: 250px;
         margin-top: -40px;
@@ -920,7 +936,7 @@ footer {
 
 .house-info-blue {
     background-color: var(--main-blue);
-    color: white;
+    color: white!important;
     min-width: 280px;
     padding: 20px 40px;
     box-sizing: border-box;
@@ -932,11 +948,28 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    color: white;
     justify-content: space-between;
     align-items: center;
     font-size: 13px;
     font-weight: 600;
     line-height: 25px;
+}
+
+.house-info-blue > p > span {
+    color: white!important;
+}
+
+.house-info-blue > p > span:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    width: 80px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.house-info-blue > p > span:nth-child(2) > img {
+    margin-left: 5px;
 }
 
 .house-info-blue > p:nth-child(5) {
@@ -977,6 +1010,7 @@ footer {
 
 .more-info-blue > p {
     font-size: 14px;
+    color: white;
 }
 
 .more-info-blue > p:nth-child(3) {
@@ -1053,6 +1087,7 @@ footer {
 
 .big-transparent-button {
     padding: 20px 40px;
+    font-size: 16px;
     text-transform: uppercase;
     background-color: transparent;
     color: white;
@@ -1093,6 +1128,7 @@ footer {
 .more-houses-nadpis {
     text-align: center;
     width: 100%;
+    font-size: 35px;
     margin-bottom: 25px;
 }
 
@@ -1146,6 +1182,7 @@ footer {
         padding: 0 30px 0 0;
     }
     .house-info-blue {
+        min-width: 330px;
         margin: -60px -100px 30px auto;
     }
 }
@@ -1178,11 +1215,8 @@ footer {
         width: calc(50% - 30px) !important;
         margin: 0 30px 30px 0;
     }
-    .kd-domy > div > div {
+    .kd-domy > div > div:nth-child(2) {
         height: 300px;
-    }
-    .katalog-heading {
-        font-size: 83px!important;
     }
 }
 
@@ -1203,10 +1237,6 @@ footer {
     background-image: none;
 }
 
-.bg-photo-ps > div > h1 {
-    color: var(--main-blue)
-}
-
 .bg-photo-ps > div > p {
     color: black;
 }
@@ -1219,7 +1249,7 @@ footer {
     margin-top: -100px;
 }
 
-.photo-ps > div {
+.photo-ps > a {
     width: calc(100% - 10px);
     height: 200px;
     background-image: url(../img/dum01.jpg);
@@ -1228,17 +1258,23 @@ footer {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.photo-ps > a > img {
+    width: 100%;
+    height: 100%;
 }
 
 @media (min-width: 576px) {
-    .photo-ps > div {
+    .photo-ps > a {
         width: calc(50% - 20px);
         margin: 0 10px 20px 10px;
     }
 }
 
 @media (min-width: 1200px) {
-    .photo-ps > div {
+    .photo-ps > a {
         width: calc(33% - 30px);
         margin: 0 15px 20px 15px;
     }
@@ -1279,11 +1315,18 @@ footer {
     border-radius: 10px;
     font-size: 16px;
     font-weight: 600;
+    display: flex;
+    flex-direction: row;
+}
+
+.blue-button > img {
+    height: 20px;
+    margin-right: 10px;
 }
 
 .button-styling > p {
     color: black;
-    margin: 40px 0 0 40px;
+    margin: 0 0 0 40px;
     font-weight: 500;
 }
 
@@ -1308,14 +1351,14 @@ footer {
 }
 
 .contact-card > p {
-    padding-left: 10px;
+    padding: 0 20px;
     margin: 0;
     font-size: 20px;
     font-weight: 600;
 }
 
 .contact-card > small {
-    padding-left: 10px;
+    padding: 0 20px;
     display: block;
     width: 100%;
     box-sizing: border-box;
@@ -1323,7 +1366,7 @@ footer {
 }
 
 .contact-card > span {
-    padding-left: 10px;
+    padding: 0 20px;
     display: block;
     width: 100%;
     box-sizing: border-box;
@@ -1355,10 +1398,6 @@ footer {
     margin: 10px;
     height: 250px;
     border-radius: 10px;
- }
-
- .office-photo:nth-last-child() {
-    margin-right: 0px;
  }
 
  .h2-heading {
@@ -1417,7 +1456,7 @@ footer {
  *****************************************************************************************************/
 
 .bg-photo-aboutUs {
-    height: 1300px;
+    height: 1000px;
     background-image: none;
 }
 
@@ -1435,61 +1474,68 @@ footer {
     width: 100%;
 }
 
-.reviews {     
-    display: flex;     
-    flex-direction: row;     
-    flex-wrap: nowrap;     
-    align-items: center;
-    margin-top: -270px;
-}  
-    
-.review-name {     
-    padding: 80px;     
-    font-size: 28px;     
-    font-weight: 600;     
-    background-color: var(--main-blue);     
-    border-radius: 10px;     
-    box-sizing: border-box;     
-    color: white;
+.reviews-div {
     display: flex;
+    flex-direction: row;
+    margin-top: -230px;
+    flex-wrap: nowrap;
     align-items: center;
-    flex-direction: column;
-}  
-    
-.review-name > span {     
-        font-weight: 500;     
-        font-size: 17px;
-}  
-        
-.review-text {     
-    padding: 20px 60px;     
-    background-color: white;     
-    border-radius: 0 10px 10px 0;     
-    font-size: 16px;     
-    color: rgba(0,0,0,0.75);     
+    justify-content: center;
+}
+
+#reviews, #reviews > div, #reviews > div > div, #reviews > div > div > div {
+    width: 100% !important;
+}
+
+.review {
+    width: calc(100% - 10px) !important;
+    margin: 0 5px;
+    display: flex;
+}
+
+.review-name {
+    display: none;
+}
+
+.review-text {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
     line-height: 25px;
-}  
-    
-.arrow-left {     
-    padding: 20px;    
-    background-color: var(--dark-main-blue);     
-    border-radius: 10px 0 0 10px;
-}  
-    
-.arrow-left2 {     
-    border-radius: 0 10px 10px 0; 
-}  
+    font-size: 14px;
+}
 
-.arrow-left > img {     
-    width: 35px;     
-    height: 35px;     
+.review-text > span {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.arrow-left {
+    display: flex!important;
+    position: relative!important;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    background-color: var(--dark-main-blue);
+    outline: none;
+    border: none;
+    cursor: pointer;
     transform: rotateZ(180deg);
-}  
+}
 
-.arrow-left2 > img {     
-    width: 35px;     
-    height: 35px;     
-    transform: rotateZ(0deg);
+.arrow-left > img {
+    width: 25px;
+}
+
+.arrow-left2 {
+    border-radius: 10px 0 0 10px;
+}
+
+.arrow-left2 > img {
+    transform: rotateZ(180deg);
 }
 
 @media (min-width: 400px) {
@@ -1510,6 +1556,55 @@ footer {
     }
     .about-us-column:nth-child(2) {
         margin-top: 110px;
+    }
+}
+@media (min-width: 1200px) {
+    .reviews-div {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        position: relative;
+        width: 100% !important;
+        margin-top: -250px;
+    }
+    .review {
+        display: flex!important;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .review-name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 90px;
+        color: white;
+        background-color: var(--main-blue);
+        border-radius: 10px;
+    }
+    .review-name > span {
+        font-weight: 600;
+        font-size: 19px;
+    }
+    .review-text {
+        padding: 40px 20px;
+        border-radius: 0 10px 10px 0;
+    }
+    .review-text > span {
+        display: none;
+    }
+    .arrow-left {
+        position: absolute!important;
+        top: 50%;
+        right: -59px;
+        transform: translateY(-50%);
+        border-radius: 0 10px 10px 0;
+    }
+    .arrow-left2 {
+        left: -60px;
+        right: unset;
+        border-radius: 10px 0 0 10px;
     }
 }
 
