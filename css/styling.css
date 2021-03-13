@@ -969,7 +969,8 @@ footer > p {
 }
 
 .house-info-blue > p > span:nth-child(2) > img {
-    margin-left: 5px;
+    margin-left: 8px;
+    width: 16px;
 }
 
 .house-info-blue > p:nth-child(5) {
@@ -991,6 +992,13 @@ footer > p {
     flex-wrap: wrap;
     margin-bottom: 100px;
     margin-top: 50px;
+    justify-content: space-between;
+}
+
+.rodinny-dum-cards > div {
+    margin-left: 0!important;
+    margin-right: 0!important;
+    width: 100%;
 }
 
 .more-info-blue {
@@ -1148,7 +1156,7 @@ footer > p {
     }
     .rodinny-dum-cards > div {
         width: calc(50% - 30px) !important;
-        margin: 0 15px!important;
+        margin: 0!important;
     }
     .more-info-blue {
         padding: 40px;
