@@ -7,6 +7,7 @@
         <title>INVEST RENT PROPERTY - HOMEPAGE</title>
         <link rel="stylesheet" href="./slick/slick.css">
         <link rel="stylesheet" href="./slick/slick-theme.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
         <link rel="stylesheet" href="./css/styling.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;900&display=swap" rel="stylesheet">
@@ -58,10 +59,11 @@
     <!-- SECTION START  -->
 <div class="section-cards">
 
-    <!-- CARDS START -->
-    <div class="container reviews-div">
-        <div id="reviews">
-            <div class="review">
+  <!-- CARDS START -->
+  <div class="container reviews-div">
+    <div id="reviews">
+        <div class="review">
+            <div>
                 <div class="review-name">
                     <span>Josef</span>
                     Říčany
@@ -75,6 +77,38 @@
                 </div>
             </div>
         </div>
+        <div class="review">
+            <div>
+                <div class="review-name">
+                    <span>Pavel</span>
+                    Říčany
+                </div>
+                <div class="review-text">
+                    <span>Pavel</span>
+                    Děkuji, že jsme si díky vám mohli s manželkou dovolit menší domeček za Prahou, s krásným výhledem do přírody.
+                    V našem věku už nehledáme ruch velkoměsta, ale zároveň nás už unavovaly zdi miniaturního bytu.
+                    Máme teď dům s krásnou zahradou, kde můžeme přivítat naše děti a vnoučata, která tráví veškerou volnou chvíli
+                    na zahradě s naším novým psem.
+                </div>
+            </div>
+        </div>
+        <div class="review">
+            <div>
+                <div class="review-name">
+                    <span>Petr</span>
+                    Říčany
+                </div>
+                <div class="review-text">
+                    <span>Petr</span>
+                    Děkuji, že jsme si díky vám mohli s manželkou dovolit menší domeček za Prahou, s krásným výhledem do přírody.
+                    V našem věku už nehledáme ruch velkoměsta, ale zároveň nás už unavovaly zdi miniaturního bytu.
+                    Máme teď dům s krásnou zahradou, kde můžeme přivítat naše děti a vnoučata, která tráví veškerou volnou chvíli
+                    na zahradě s naším novým psem.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="o-nas-buttons">
         <button id="next-review-button" class="arrow-left">
             <img src="./img/sipka-vpravo--bila.svg" alt="sipka-vpravo-bila"/>
         </button>
@@ -82,7 +116,8 @@
             <img src="./img/sipka-vpravo--bila.svg" alt="sipka-vpravo-bila"/>
         </button>
     </div>
-    <!-- CARDS END -->
+</div>
+<!-- CARDS END -->
 
     <!-- CARDS START  -->
     <div class="container">
@@ -150,10 +185,18 @@
     <div class="container" style="display: block; margin: 50px auto 100px auto;">
         <h2 class="h2-heading">Certifikáty</h2>
         <div class="office-main-photo">
-            <div class="office-photo"></div>
-            <div class="office-photo"></div>
-            <div class="office-photo"></div>
-            <div class="office-photo"></div>
+            <a class="office-photo-fancy" href="./img/dum01.jpg" data-fancybox="images" data-caption="Certifikat01">
+            <img src="./img/dum01.jpg" alt="">
+        </a>
+        <a class="office-photo-fancy" href="./img/dum02.jpg" data-fancybox="images" data-caption="Certifikat02">
+            <img src="./img/dum02.jpg" alt="">
+        </a>
+        <a class="office-photo-fancy" href="./img/dum01.jpg" data-fancybox="images" data-caption="Certifikat03">
+            <img src="./img/dum01.jpg" alt="">
+        </a>
+        <a class="office-photo-fancy" href="./img/dum02.jpg" data-fancybox="images" data-caption="Certifikat04">
+            <img src="./img/dum02.jpg" alt="">
+        </a>
         </div>
     </div>
     <!-- CERTIFIKÁTY END -->
@@ -177,8 +220,8 @@
             </div>
             <div class="info-quater">
                 <h4>Kontakty</h4>
-                <a>office@investrentproperty.cz</a>
-                <a>+420 723 851 579</a>
+                <a href="mailto:office@investrentproperty.cz">office@investrentproperty.cz</a>
+                <a href="tel:+420723851579">+420 723 851 579</a>
                 <a href="https://goo.gl/maps/jerCvnybjrdyfVwR9">Královská cesta 147, Kolín</a>
             </div>
             <div class="info-quater">
@@ -200,7 +243,8 @@
 </footer>
 <!-- FOOTER END -->
 
-<script src="./slick/jQuery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="./slick/slick.min.js"></script>
 <script>
     //MENU HANDLER
@@ -208,14 +252,14 @@
         $(".menu").toggleClass("menu-open");
     }
     //SLIDER SETTING
-    $('#reviews').slick({
-        nextArrow: $("#next-review-button"),
-        prevArrow: $("#prev-review-button"),
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        pauseOnHover: true,
-        speed: 800
+    $('#reviews').slick({         
+        nextArrow: $("#next-review-button"),         
+        prevArrow: $("#prev-review-button"),         
+        infinite: true,         
+        slidesToShow: 1,         
+        slidesToScroll: 1,         
+        pauseOnHover: true,         
+        speed: 800,     
     });
 
 </script>

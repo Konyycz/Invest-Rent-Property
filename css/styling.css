@@ -62,6 +62,33 @@ p {
     margin-left: 5px;
 }
 
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(0,0,0,0.8);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  right: 0px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 @media (min-width: 576px) {
     .container {
         max-width: 540px;
@@ -69,6 +96,9 @@ p {
     h1 {
         font-size: 55px;
     }
+    .tooltip .tooltiptext {
+        right: -125px;
+      }
 }
 @media (min-width: 768px) {
     h1 {
@@ -1143,7 +1173,7 @@ footer > p {
 /* nutny !IMPORTANT at prepise nastaveni z karet z homepage */
 .more-houses > div {
     width: calc(100% - 10px) !important;
-    margin: 0 auto 20px auto!important;
+    margin: 0 5px 20px 5px!important;
 }
 
 .more-houses > div > div {
@@ -1155,7 +1185,7 @@ footer > p {
         padding: 40px;
     }
     .rodinny-dum-cards > div {
-        width: calc(50% - 30px) !important;
+        width: calc(50% - 15px) !important;
         margin: 0!important;
     }
     .more-info-blue {
@@ -1179,6 +1209,7 @@ footer > p {
     }
     .more-houses > div {
         width: calc(50% - 20px) !important;
+        margin: 0!important;
     }
 }
 
@@ -1255,6 +1286,8 @@ footer > p {
     flex-wrap: wrap;
     margin-bottom: 200px;
     margin-top: -100px;
+    position: relative;
+    z-index: 100;
 }
 
 .photo-ps > a {
@@ -1325,6 +1358,8 @@ footer > p {
     font-weight: 600;
     display: flex;
     flex-direction: row;
+    cursor: pointer;
+    text-decoration: none!important;
 }
 
 .blue-button > img {
@@ -1347,15 +1382,17 @@ footer > p {
  .contact-main-card {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 80px;
+    justify-content: space-between;
 }
 
 .contact-card {
     border-radius: 10px;
     padding-bottom: 20px;
-    margin: 0 10px 10px 10px!important;
-    width: calc(100% - 20px);
+    margin: 0 0px 10px 0px!important;
+    width: calc(100% - 10px);
 }
 
 .contact-card > p {
@@ -1394,16 +1431,37 @@ footer > p {
 
  .office-main-photo {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ }
+
+ .office-main-photo > a {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
  }
 
+ .office-photo-fancy {
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+ }
+
+ .office-photo-fancy > img {
+    height: 100%;
+    width: 100%;
+ }
+
  .office-photo {
-    width: calc(100% - 20px);
+    width: calc(100% - 10px);
     background-image: url(../img/dum01.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 10px;
+    margin-bottom: 10px;
     height: 250px;
     border-radius: 10px;
  }
@@ -1417,7 +1475,7 @@ footer > p {
  }
 
  .office-map {
-     margin: 10px 10px 50px 10px;
+     margin: 10px 0px 50px 0px;
      border-radius: 10px;
      overflow: hidden;
  }
@@ -1426,8 +1484,11 @@ footer > p {
     .blue-button {
         padding: 30px 100px;
     }
-    .office-photo {
-        width: calc(50% - 20px);
+    .office-photo, .office-photo-fancy {
+        width: calc(50% - 10px);
+     }
+     .office-main-photo {
+         flex-direction: row;
      }
 }
 
@@ -1436,7 +1497,10 @@ footer > p {
         font-size: 100px!important;
     }
     .contact-card {
-        width: calc(50% - 20px);
+        width: calc(50% - 10px);
+    }
+    .contact-main-card {
+        flex-direction: row;
     }
 }
 
@@ -1449,10 +1513,10 @@ footer > p {
         justify-content: flex-start;
     }
     .contact-card {
-        width: calc(33.33% - 20px);
+        width: calc(33.33% - 10px);
     }
-    .office-photo {
-        width: calc(25% - 20px);
+    .office-photo, .office-photo-fancy {
+        width: calc(25% - 10px);
     }
 }
 
@@ -1474,6 +1538,7 @@ footer > p {
     flex-wrap: wrap;
     margin-bottom: 100px;
     margin-top: 50px;
+    justify-content: space-between;
 }
 
 .about-us-column {
@@ -1482,23 +1547,28 @@ footer > p {
     width: 100%;
 }
 
-.reviews-div {
-    display: flex;
-    flex-direction: row;
-    margin-top: -230px;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
+.about-us-column > div {
+    margin-left: 5px!important;
+    margin-right: 5px!important;
+    width: calc(100% - 10px)!important;
 }
 
-#reviews, #reviews > div, #reviews > div > div, #reviews > div > div > div {
-    width: 100% !important;
+.reviews-div {
+    position: relative;
+    display: block!important;
+    margin-top: -230px!important;
+    z-index: 100;
 }
 
 .review {
-    width: calc(100% - 10px) !important;
-    margin: 0 5px;
+    width: calc(100% - 10px)!important;
+    margin: 0 5px!important;
+    position: relative;
+}
+
+.review > div {
     display: flex;
+    flex-direction: column;
 }
 
 .review-name {
@@ -1506,7 +1576,9 @@ footer > p {
 }
 
 .review-text {
+    width: 100%;
     padding: 20px;
+    box-sizing: border-box;
     border-radius: 10px;
     background-color: white;
     overflow: hidden;
@@ -1520,6 +1592,13 @@ footer > p {
     margin-bottom: 10px;
     font-size: 19px;
     font-weight: 600;
+}
+
+.o-nas-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .arrow-left {
@@ -1542,8 +1621,8 @@ footer > p {
     border-radius: 10px 0 0 10px;
 }
 
-.arrow-left2 > img {
-    transform: rotateZ(180deg);
+.arrow-left2 > img {     
+    transform: rotateZ(180deg); 
 }
 
 @media (min-width: 400px) {
@@ -1560,60 +1639,69 @@ footer > p {
 }
 @media (min-width: 992px) {
     .about-us-column {
-        width: 50%;
+        width: calc(50% - 10px);
+    }
+    .about-us-column > div {
+        margin-left: 0!important;
+        margin-right: 0!important;
+        width: 100%!important;
     }
     .about-us-column:nth-child(2) {
-        margin-top: 110px;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        align-items: center;
     }
 }
-@media (min-width: 1200px) {
-    .reviews-div {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        position: relative;
-        width: 100% !important;
-        margin-top: -250px;
-    }
-    .review {
-        display: flex!important;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center;
-    }
-    .review-name {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 90px;
-        color: white;
-        background-color: var(--main-blue);
-        border-radius: 10px;
-    }
-    .review-name > span {
-        font-weight: 600;
-        font-size: 19px;
-    }
-    .review-text {
-        padding: 40px 20px;
-        border-radius: 0 10px 10px 0;
-    }
-    .review-text > span {
-        display: none;
-    }
-    .arrow-left {
-        position: absolute!important;
-        top: 50%;
-        right: -59px;
-        transform: translateY(-50%);
-        border-radius: 0 10px 10px 0;
-    }
-    .arrow-left2 {
-        left: -60px;
-        right: unset;
-        border-radius: 10px 0 0 10px;
-    }
+@media (min-width: 1200px) {     
+    .reviews-div {         
+        margin-top: -250px!important;
+        width: 85%;     
+    }   
+    .review > div {         
+        display: flex;         
+        flex-direction: row;         
+        align-items: center;     
+    }     
+    .review-name {         
+        display: flex;         
+        flex-direction: column;         
+        align-items: center;         
+        justify-content: center;         
+        padding: 90px;         
+        color: white;         
+        background-color: #173d69;         
+        border-radius: 10px;     
+    }     
+    .review-name > span {         
+        font-weight: 600;         
+        font-size: 19px;     
+    }     
+    .review-text {         
+        padding: 40px 20px;         
+        border-radius: 0 10px 10px 0;     
+    }     
+    .review-text > span {         
+        display: none;     
+    }     
+    .arrow-left {         
+        position: absolute!important;         
+        top: 50%;         
+        right: -60px;         
+        transform: translateY(-50%);         
+        border-radius: 0 10px 10px 0;     
+    }     
+    .arrow-left2 {         
+        left: -60px;         
+        right: unset;         
+        border-radius: 10px 0 0 10px;     
+    } 
+}
+
+@media (min-width: 1400px) {
+    .reviews-div {         
+        width: 100%;     
+    }   
 }
 
 /* resposive widths */
